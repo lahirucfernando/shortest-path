@@ -19,6 +19,10 @@ export const useGraphStore = defineStore('graph', {
 
   actions: {
     calculateShortestPath() {
+      if (!this.nodesList.includes(this.fromNode) || !this.nodesList.includes(this.toNode)) {
+        throw new Error(`No path from ${this.fromNode} to ${this.toNode}`);
+      }
+
       if (!this.fromNode || !this.toNode) return;
 
       const start = this.fromNode;
