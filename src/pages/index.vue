@@ -1,7 +1,8 @@
 <template>
-  <HelloWorld />
+  <AppHeader />
+  <ShortestPathCalculator />
 </template>
 
 <script lang="ts" setup>
-  //
+//
 </script>
